@@ -1,19 +1,29 @@
 "use client";
-import {  Container, Marcador, Title } from "./layoutStyle";
+import { Button } from "@/components/button";
+import { Container } from "./layoutStyle";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <Container>
-      <Marcador>
-        <div></div>
-        Mateus Feitosa</Marcador>
-      <Title>O Melhor Advogado de São Paulo</Title>
-      <p>
-        {" "}
-        Lorem Ipsum has been the industrys standard dummy text ever since the
-        1500s.
-      </p>
-      <button>Contate-me</button>
+      <div className="containerInfo">
+        <p> - Mateus Feitosa</p>
+        <h1> Seu parceiro confiável na busca pela justiça</h1>
+        <p> Defendendo seus direitos com excelência e compromisso</p>
+        <Button 
+        text="Contate-me"
+        />
+      </div>
+
+      <div className="containerFoto">
+        <Image
+          src="/fotocapa.png"
+          alt="Foto Mateus"
+          width={644}
+          height={791}
+          className="img"
+        />
+      </div>
     </Container>
   );
 }

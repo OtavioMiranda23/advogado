@@ -2,48 +2,42 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   display: flex;
-  flex-direction: column;
-  color:#E5E8E8;
-  background-color: #212F3C;
-  justify-content: center;
+  overflow: hidden;
+  background: #1E2027;
+  color: #fff;
+  padding: 14px 14px 0 14px;
 
-  padding: 1rem;
-  gap: 2rem;
-
-  p {
-    font-weight: 200;
-  }
-  button {
-    margin: 6rem 0;
+  .containerInfo {
     display: flex;
-    
-    height: 4rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background-color: #F1C40F;
-    
-
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+
+    p:nth-child(1){
+      color: #DFAE4F;
+    }
   }
-`;
 
-export const Title = styled.h1`
-    display: flex;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 500;
-`;
+  .containerFoto {
+    display: none;
+  }
 
-export const Marcador = styled.strong`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-    div {
-        height: 1px;
-        width: 36px;
-        border: 1px solid #F1C40F;
+  @media (min-width: 768px) {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .containerFoto {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      height: calc(791px/1.5);
+      width: calc(564px/1.5);
     }
 
-`;
+    button {
+      margin: 0 10px;
+    }
+  }
+`
