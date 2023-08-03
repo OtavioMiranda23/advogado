@@ -4,7 +4,6 @@ interface IButton {
     primary?: boolean;
 }
 export function Button({text, primary=true}: IButton) {
-    console.log(typeof(primary))
     return (
         <Container $primary={primary}>
             {text}
